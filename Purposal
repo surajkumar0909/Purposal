@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Marry Me?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: url('https://source.unsplash.com/1600x900/?romantic,couple') no-repeat center center/cover;
+            color: white;
+            padding-top: 100px;
+        }
+        #proposal {
+            background: rgba(0, 0, 0, 0.6);
+            display: inline-block;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: #28a745;
+            color: white;
+        }
+        .no {
+            background-color: #dc3545;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="proposal">
+        <h1>💖 [Her Name], Will You Marry Me? 💖</h1>
+        <p>You are the love of my life, my best friend, and my forever. I can't imagine my life without you.</p>
+        <button class="yes" onclick="yesResponse()">Yes! 💍</button>
+        <button class="no" onmouseover="moveNoButton()">No 😢</button>
+    </div>
+
+    <script>
+        function yesResponse() {
+            document.body.innerHTML = "<h1 style='color: white; text-align: center; margin-top: 20%;'>💞 Yay! I Love You! 💞</h1> \
+                                      <h2 style='color: white; text-align: center;'>Let's start our forever together! 💍</h2>";
+        }
+
+        function moveNoButton() {
+            let noButton = document.querySelector(".no");
+            let x = Math.random() * window.innerWidth * 0.8;
+            let y = Math.random() * window.innerHeight * 0.8;
+            noButton.style.left = x + "px";
+            noButton.style.top = y + "px";
+        }
+    </script>
+
+</body>
+</html>
